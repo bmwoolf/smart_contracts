@@ -4,9 +4,9 @@
 import "hardhat/console.sol";
 
 
-pragma solidity ^0.4.8;
+pragma solidity ^0.4.22;
 
-contract CryptoPunksMarket {
+contract CryptoPunks {
 
     // You can use this hash to verify the image file containing all the punks
     string public imageHash = "ac39af4793119ee46bbff351d8cb6b5f23da60222126add4268e261199a2921b";
@@ -63,8 +63,8 @@ contract CryptoPunksMarket {
     event PunkNoLongerForSale(uint indexed punkIndex);
 
     /* Initializes contract with initial supply tokens to the creator of the contract */
-    function CryptoPunksMarket() payable {
-        balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens
+    function CryptoPunks() payable {
+        balanceOf[msg.sender] = 1000;              // Give the creator all initial tokens
         owner = msg.sender;
         totalSupply = 10000;                        // Update total supply
         punksRemainingToAssign = totalSupply;

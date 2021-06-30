@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const CryptoPunks = await hre.ethers.getContractFactory("CryptoPunks");
-  const cryptopunks = await CryptoPunks.deploy("Hello, Hardhat!");
+  const cryptopunks = await CryptoPunks.deploy();
 
   await cryptopunks.deployed();
 
